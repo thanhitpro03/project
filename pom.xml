@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<!-- Spring Boot parent version -->
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>3.4.0</version> <!-- Cập nhật lên phiên bản mới nhất của Spring Boot 3.x -->
+		<relativePath /> <!-- lookup parent from repository -->
+	</parent>
+
+	<groupId>com.poly.DTNsShop</groupId>
+	<artifactId>DTNsShop</artifactId>
+	<version>1.0.0</version>
+	<packaging>war</packaging>
+	<name>DTNsShop</name>
+	<description>demo_DTNsShop</description>
+
+	<!-- Cập nhật Java phiên bản -->
+	<properties>
+		<java.version>23</java.version> <!-- Sử dụng Java 23 -->
+	</properties>
+
+	<!-- Các dependencies của dự án -->
+	<dependencies>
+		<!-- Spring Boot Web Starter -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+			<version>3.0.4</version>
+		</dependency>
+
+		<!-- JSTL (JavaServer Pages Standard Tag Library) -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+			<version>1.2</version> <!-- Cập nhật phiên bản JSTL -->
+		</dependency>
+
+		<!-- Lombok (giúp giảm mã code boilerplate) -->
+		<!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>1.18.34</version>
+			<scope>provided</scope>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+		<!-- https://mvnrepository.com/artifact/com.microsoft.sqlserver/mssql-jdbc -->
+		<dependency>
+			<groupId>com.microsoft.sqlserver</groupId>
+			<artifactId>mssql-jdbc</artifactId>
+			<version>12.8.1.jre11</version>
+		</dependency>
+
+		<!-- Spring Boot DevTools (Dùng cho việc phát triển, giúp reload lại ứng dụng khi thay đổi mã nguồn) -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<version>3.0.4</version> <!-- Cập nhật phiên bản Spring Boot DevTools -->
+			<scope>runtime</scope>
+			<optional>true</optional>
+		</dependency>
+
+		<!-- Spring Boot Tomcat (Web container) -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-tomcat</artifactId>
+			<scope>provided</scope>
+			<version>3.0.4</version> <!-- Cập nhật phiên bản Spring Boot Tomcat -->
+		</dependency>
+
+		<!-- Tomcat Jasper (Dùng cho việc xử lý JSP) -->
+		<dependency>
+			<groupId>org.apache.tomcat.embed</groupId>
+			<artifactId>tomcat-embed-jasper</artifactId>
+			<version>9.0.58</version> <!-- Cập nhật phiên bản Tomcat Jasper -->
+		</dependency>
+
+		<!-- Spring Boot Data JPA (Dùng cho làm việc với cơ sở dữ liệu) -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+			<version>3.0.4</version> <!-- Cập nhật phiên bản Spring Boot Data JPA -->
+		</dependency>
+
+		<!-- Spring Boot Validation (Dùng cho việc kiểm tra dữ liệu đầu vào) -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-validation</artifactId>
+			<version>3.0.4</version> <!-- Cập nhật phiên bản Spring Boot Validation -->
+		</dependency>
+
+			<!-- Spring Boot Email Starter -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-mail</artifactId>
+			<version>3.0.4</version> <!-- Cập nhật phiên bản Spring Boot Email Starter -->
+		</dependency>
+
+		<!-- Tiles JSP (Để sử dụng với Tiles framework cho các trang JSP) -->
+		<dependency>
+			<groupId>org.apache.tiles</groupId>
+			<artifactId>tiles-extras</artifactId>
+			<version>3.0.7</version> <!-- Hoặc phiên bản mới nhất -->
+		</dependency>
+
+		<!-- Spring Boot Test (Dùng cho các bài kiểm tra ứng dụng) -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+			<version>3.0.4</version> <!-- Cập nhật phiên bản Spring Boot Test -->
+		</dependency>
+	</dependencies>
+
+	<!-- Build Configuration -->
+	<build>
+		<plugins>
+			<!-- Spring Boot Maven Plugin -->
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<version>3.0.4</version> <!-- Cập nhật phiên bản Spring Boot Maven Plugin -->
+			</plugin>
+		</plugins>
+	</build>
+</project>
